@@ -1,0 +1,24 @@
+#IGNORE EVERYTHING
+*
+
+#IGNORE SUBFOLDERS TOO
+!*/
+
+
+#EXEPT THIS FOLDERS
+
+
+
+#EXEPT THIS FILES
+!.gitignore
+!README.md
+
+#SOURCE FILE
+!project/omnetpp.ini
+!project/Queue.cc
+!project/Queue.ned
+!project/Source.cc
+!project/Source.ned
+!project/Sink.cc
+!project/Source.ned
+!project/Mail.msg
