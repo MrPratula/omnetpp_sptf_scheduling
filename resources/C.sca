@@ -1,0 +1,149 @@
+version 3
+run Net1-0-20221230-18:25:18-8268
+attr configname Net1
+attr datetime 20221230-18:25:18
+attr datetimef 20221230-182518
+attr experiment Net1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Net
+attr processid 8268
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config description "rho 0.4"
+config **.source*.avgInterArrivalTime 0.5s
+config **.queue*.avgServiceTime 0.2s
+config network Net
+config sim-time-limit 1h
+config cpu-time-limit 300s
+
+par Net.source1 typename "\"Source\""
+par Net.source1 avgInterArrivalTime 0.5s
+attr unit s
+par Net.source1 start_uniform 0s
+attr unit s
+par Net.source1 end_uniform 3s
+attr unit s
+par Net.queue1 typename "\"Queue\""
+par Net.queue1 avgServiceTime 0.2s
+attr unit s
+scalar Net.queue1 responseTime:mean 12.485572266247
+attr interpolationmode none
+attr recordingmode mean
+attr title "response time at end of service, mean"
+attr unit s
+scalar Net.queue1 responseTime:max 1822.1821012968
+attr interpolationmode none
+attr recordingmode max
+attr title "response time at end of service, max"
+attr unit s
+scalar Net.queue1 queueingTime:mean 11.625156186429
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Net.queue1 queueingTime:max 1820.441860502
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Net.queue1 busy:timeavg 1
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar Net.queue1 qlen:timeavg 1470.5565046407
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar Net.queue1 qlen:max 2947
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+par Net.sink1 typename "\"Sink\""
+scalar Net.sink1 arrivedMsg:last 4172
+attr interpolationmode none
+attr recordingmode last
+attr title "number of arrived msg, last"
+statistic Net.sink1 lifetime:histogram
+field count 4172
+field mean 12.485572266247
+field stddev 76.879457290333
+field min 0.051180973699
+field max 1822.1821012968
+field sum 52089.807494785
+field sqrsum 25302861.981842
+attr interpolationmode none
+attr recordingmode histogram
+attr title "lifetime of arrived msg"
+attr unit s
+bin	-inf	0
+bin	0	4010
+bin	36	56
+bin	72	19
+bin	108	15
+bin	144	9
+bin	180	9
+bin	216	10
+bin	252	3
+bin	288	4
+bin	324	3
+bin	360	1
+bin	396	4
+bin	432	0
+bin	468	5
+bin	504	2
+bin	540	2
+bin	576	3
+bin	612	1
+bin	648	4
+bin	684	0
+bin	720	1
+bin	756	1
+bin	792	0
+bin	828	1
+bin	864	1
+bin	900	0
+bin	936	0
+bin	972	4
+bin	1008	0
+bin	1044	0
+bin	1080	0
+bin	1116	0
+bin	1152	0
+bin	1188	0
+bin	1224	0
+bin	1260	0
+bin	1296	0
+bin	1332	1
+bin	1368	0
+bin	1404	0
+bin	1440	1
+bin	1476	0
+bin	1512	1
+bin	1548	0
+bin	1584	0
+bin	1620	0
+bin	1656	0
+bin	1692	0
+bin	1728	0
+bin	1764	0
+bin	1800	1
+bin	1836	0
+scalar Net.sink1 lifetime:mean 12.485572266247
+attr interpolationmode none
+attr recordingmode mean
+attr title "lifetime of arrived msg, mean"
+attr unit s
+scalar Net.sink1 lifetime:max 1822.1821012968
+attr interpolationmode none
+attr recordingmode max
+attr title "lifetime of arrived msg, max"
+attr unit s
+par Net typename "\"Net\""
+

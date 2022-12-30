@@ -1,0 +1,55 @@
+file 1443376 1672422389                                         
+version 3
+run Net1-0-20221230-18:46:21-10117
+attr configname Net1
+attr datetime 20221230-18:46:21
+attr datetimef 20221230-184621
+attr experiment Net1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Net
+attr processid 10117
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config description "rho 0.4"
+config **.source*.avgInterArrivalTime 0.5s
+config **.queue*.avgServiceTime 0.2s
+config network Net
+config sim-time-limit 1h
+config cpu-time-limit 300s
+
+vector 0 Net.queue1 qlen:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr title "queue length"
+vector 1 Net.queue1 queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "queueing time at dequeue"
+attr unit s
+vector 2 Net.queue1 responseTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "response time at end of service"
+attr unit s
+vector 3 Net.sink1 lifetime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "lifetime of arrived msg"
+attr unit s
+vector 4 Net.sink1 arrivedMsg:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr title "number of arrived msg"
+0	1273 378678 0 28410 0 3599.648260817766 13761 0 45 130892 2389044
+1	379951 281565 2 28407 0 3599.308302583464 7088 0 482.97796269252 25798.920676276 3090256.6094379
+2	661516 284503 5 28407 0.548813502304 3599.308302583464 7087 0.001369409962 483.97598548188 29273.989517722 3138360.777423
+3	946019 284505 6 28408 0.548813502304 3599.308302583464 7087 0.001369409962 483.97598548188 29273.989517722 3138360.777423
+4	1230524 212851 6 28408 0.548813502304 3599.308302583464 7087 1 7087 25116328 118674649800
+
