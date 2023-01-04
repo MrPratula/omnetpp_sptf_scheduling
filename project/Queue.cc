@@ -94,8 +94,14 @@ void Queue::handleMessage(cMessage *msg)
             msgInServer = get_shortest_packet(&queue);
 
             //Emit queue len and queuing time for this packet
+            simtime_t queueTime = simTime() - msgInServer->getTimestamp();
+
             emit(qlenSignal, queue.getLength());
-            emit(queueingTimeSignal, simTime() - msgInServer->getTimestamp());
+            emit(queueingTimeSignal, queueTime);
+
+            //Store time spent in queue into packet
+            Mail* mailtmp = (Mail*)msgInServer;
+            mailtmp->setQueue_time((double)queueTime.dbl());
 
             //start service
             startPacketService(msg);

@@ -1,7 +1,9 @@
 
 
-with open('B.vec', 'r') as f:
+with open('log.txt', 'r') as f:
 
     for line in f:
-        print(line.strip())
+        data = line.split("-")
+        print(data[1], data[2], data[3])
+
 

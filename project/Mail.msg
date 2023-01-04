@@ -19,4 +19,5 @@
 
 packet Mail {
     double service_time;
+    double queue_time;
 }
