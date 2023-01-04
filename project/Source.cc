@@ -65,7 +65,7 @@ void Source::handleMessage(cMessage *msg)
 {
     //generate packet name
     char msgname[20];
-    sprintf(msgname, "message-%d", ++nbGenMessages);
+    sprintf(msgname, "%d", ++nbGenMessages);
 
     //generate and send the packet out to the queue
     Mail* mail = new Mail(msgname);
