@@ -23,5 +23,7 @@
 !project/Source.ned
 !project/Mail.msg
 
-#RESOURCES FOLDER
+#RESOURCES FOLDER AND ANALYSIS
 !resources/*
+!analysis/*
+
