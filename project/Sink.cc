@@ -32,6 +32,7 @@ void Sink::initialize()
     //clear the log file
     std::ofstream log;
     log.open("log.txt", std::ios::out | std::ios::trunc);
+    log << "id-qlen-length\n";
     log.close();
 }
 
