@@ -14,6 +14,8 @@ class Source : public cSimpleModule
     double start_uniform;
     double end_uniform;
 
+    simsignal_t plenSignal;
+
   public:
     Source();
     virtual ~Source();
@@ -38,6 +40,9 @@ Source::~Source()
 
 void Source::initialize()
 {
+
+    plenSignal = registerSignal("plen");
+
     sendMessageEvent = new cMessage("sendMessageEvent");
     nbGenMessages = 0;
 
@@ -67,6 +72,8 @@ void Source::handleMessage(cMessage *msg)
 
     // attach to the mail it's process time
     double service_time = uniform(start_uniform, end_uniform);
+
+    emit(plenSignal, (simtime_t)service_time);
 
     mail->setService_time(service_time);
 

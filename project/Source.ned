@@ -6,6 +6,11 @@ simple Source
         volatile double end_uniform @unit(s);
         
         @display("i=block/source");
+        
+        @signal[plen](type="simtime_t");
+        
+        @statistic[plen](title="packet length";unit=s;record=vector,mean,max;interpolationmode=none);
+        
     gates:
         output out;
 }
