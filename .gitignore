@@ -20,7 +20,8 @@
 !project/Source.cc
 !project/Source.ned
 !project/Sink.cc
-!project/Source.ned
+!project/Sink.ned
+!project/Net.ned
 !project/Mail.msg
 
 #RESOURCES FOLDER AND ANALYSIS
