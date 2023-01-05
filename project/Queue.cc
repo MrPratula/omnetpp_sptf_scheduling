@@ -17,7 +17,7 @@ protected:
     simsignal_t queueingTimeSignal;
     simsignal_t responseTimeSignal;
 
-    double avgServiceTime;
+    // double avgServiceTime;
 
     bool serverBusy;
 
@@ -68,7 +68,7 @@ void Queue::initialize()
     emit(busySignal, serverBusy);
 
     //get avgServiceTime parameter
-    avgServiceTime = par("avgServiceTime").doubleValue();
+    // avgServiceTime = par("avgServiceTime").doubleValue();
 }
 
 void Queue::handleMessage(cMessage *msg)

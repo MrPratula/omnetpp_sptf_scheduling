@@ -1,7 +1,8 @@
 simple Queue
 {
     parameters:
-        volatile double avgServiceTime @unit(s);
+        //volatile double avgServiceTime @unit(s);
+        
         @display("i=block/queue;q=queue");
         
         @signal[qlen](type="long");
