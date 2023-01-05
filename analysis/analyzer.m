@@ -8,7 +8,7 @@ headerlinesIn = 1;
 A = importdata(name, delimiterIn, headerlinesIn);
 
 % ampiezza dell'intervallo della distribuzione uniforme
-L = 2;
+L = 3;
 
 % precisione con cui dividere l'intervallo della uniforme
 delta = 0.1;
@@ -76,7 +76,3 @@ xlabel('Packet service time [s]')
 ylabel('avg queue time [s]')
 
 hold off
-
-
-
-
