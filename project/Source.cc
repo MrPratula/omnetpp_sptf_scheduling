@@ -57,6 +57,11 @@ void Source::initialize()
 
     end_uniform = par("end_uniform").doubleValue();
 
+
+    EV << "starting simulation wiith:" << endl;
+    EV << " lambda = " << 1/avgInterArrivalTime << endl;
+    EV << "G is Uniform(0," << end_uniform << ")" << endl;
+
     //start sending packets
     scheduleAt(simTime(), sendMessageEvent);
 }
