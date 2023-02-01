@@ -99,7 +99,7 @@ for y = 1:Y_length
     end
 end
 
-% P(B=b) is the probability of a packet having length in delta_length
+% P(B=b) is the probability of a packet having length b in delta_length
 B = (L/delta_length)^(-1);
 
 % ora calcoliamo P(A|B) utilizzando la formula P(A∧B)/P(B)
@@ -110,7 +110,15 @@ for y = 1:Y_length
     end
 end
 
+writematrix(Condizionata, "condizionata.csv")
 
+figure
+
+imagesc(Condizionata)
+colorbar;
+xlabel("packet length");
+ylabel("packet queue time");
+title("P(A|B) = P(A∧B)/P(B)");
 
 
 

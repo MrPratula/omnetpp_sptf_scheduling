@@ -13,7 +13,6 @@ L = 0.8;
 % precisione con cui dividere l'intervallo della uniforme
 delta = 0.05;
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % read input file
