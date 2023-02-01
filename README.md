@@ -7,3 +7,5 @@ In order to run properly the project follow the steps below.
 - run Omnet simulation;
 - copy and paste log.txt in analysis folder;
 - run Matlab scripts in anaysis folder to compare the results.
+
+Built with Omnet++ 6.0
