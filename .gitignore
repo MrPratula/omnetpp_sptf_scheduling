@@ -12,6 +12,7 @@
 #EXEPT THIS FILES
 !.gitignore
 !README.md
+!delivery.pdf
 
 #SOURCE FILE
 !project/omnetpp.ini
@@ -25,6 +26,5 @@
 !project/Mail.msg
 
 #RESOURCES FOLDER AND ANALYSIS
-!resources/*
 !analysis/*
 
