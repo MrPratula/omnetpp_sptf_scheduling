@@ -98,7 +98,5 @@ for y = 1:Y_length
     end
 end
 
-
-
-
+% ora calcoliamo la matrice P(A|B) e vediamo se è ugu
 

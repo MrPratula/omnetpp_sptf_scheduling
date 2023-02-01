@@ -8,17 +8,17 @@ headerlinesIn = 1;
 A = importdata(name, delimiterIn, headerlinesIn);
 
 % ampiezza dell'intervallo della distribuzione uniforme
-L = 3;
+L = 0.8;
 
 % precisione con cui dividere l'intervallo della uniforme
-delta = 0.1;
+delta = 0.05;
 
 % parametri usati per scandire gli intervalli
 from = 0;
 to = delta;
 
 % inizializzazione matrice dei risultati
-result_size = L/0.1;
+result_size = L/delta;
 R = [result_size,5];
 for i = 1:result_size
     R(i,1) = from;  % pacchetti con lunghezza compresa da
@@ -36,7 +36,7 @@ for i = 1:length(A.data)
     from = 0;
     to = delta;
     row = 1;
-    while to <= L
+    while to <= L+1
         if ((A.data(i,3) > from) && (A.data(i,3) < to))
 
             % somma del tempo totale di coda
