@@ -1,25 +1,33 @@
 clear;
 close all;
 
-% P(A|B) = P(A∧B)/P(B)
+%%%%%%%%%%%%%%%%%%%% Variable to change %%%%%%%%%%%%%%%%%%%%%
 
-% calclo di P(A∧B)
-
+% nome del file di input
 name = 'log.txt';
+
+% lunghezza della uniforme
+L = 0.8;
+
+% intervallo con cui dividere la lunghezza dei pacchetti
+delta_length = 0.05;
+
+% intervallo con cui dividere i tempi di coda
+delta_time = 1;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% read input file
 delimiterIn = '-';
 headerlinesIn = 1;
-
 A = importdata(name, delimiterIn, headerlinesIn);
 
-% asse x contiene gli intervall di lunghezza del pacchetto
-L = 0.8;
-delta_length = 0.05;
+% asse x contiene gli intervalli di lunghezza del pacchetto
 X_length = L/delta_length;
 
 % asse Y contiene intervallo dei tempi di attesa
 max = max(A.data);
 max_qlen = ceil(max(2));
-delta_time = 1;
 Y_length = max_qlen/delta_time;
 
 % matrice delle occorrenze
@@ -30,6 +38,10 @@ Congiunta = zeros(Y_length, X_length);
 
 % matrice della probabilità condizionata
 Condizionata = zeros(Y_length, X_length);
+
+% P(A|B) = P(A∧B)/P(B)
+
+% calclo di P(A∧B)
 
 % init parametri per scandire gli intervalli
 length_start = 0;

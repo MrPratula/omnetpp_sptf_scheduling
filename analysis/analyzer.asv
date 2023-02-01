@@ -4,22 +4,20 @@ close all;
 
 %%%%%%%%%%%%%%%%%%%% Variable to change %%%%%%%%%%%%%%%%%%%%%
 
-% nome del file di input
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 name = 'log.txt';
+delimiterIn = '-';
+headerlinesIn = 1;
+A = importdata(name, delimiterIn, headerlinesIn);
 
 % ampiezza dell'intervallo della distribuzione uniforme
 L = 0.8;
 
 % precisione con cui dividere l'intervallo della uniforme
 delta = 0.05;
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% read input file
-delimiterIn = '-';
-headerlinesIn = 1;
-A = importdata(name, delimiterIn, headerlinesIn);
 
 % parametri usati per scandire gli intervalli
 from = 0;
@@ -77,6 +75,7 @@ y_axis = (R*[0,0,0,0,1]')';
 x_axis = (R*[0,1,0,0,0]')';
 
 bar(x_axis, y_axis)
+%plot(hist_edges, data)
 
 title('Packet avg queue time based on packet length (service time)')
 xlabel('Packet service time [s]')
